@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Section</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Body styling */
+        body {
+            background-color: #10131d;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Header */
+        header h1 {
+            margin-bottom: 50px;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: white;
+        }
+
+        /* Subheading */
+        h2 {
+            margin: 30px 0 20px;
+            font-size: 2em;
+            color: #1e90ff;
+        }
+
+        /* Team section */
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+
+        /* Member card */
+        .member {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: linear-gradient(145deg, #1e1f33, #282c44);
+            box-shadow: 5px 5px 15px rgba(20, 85, 150, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Member hover effect */
+        .member:hover {
+            transform: translateY(-10px);
+            box-shadow: 5px 5px 25px rgba(30, 140, 240, 0.8);
+        }
+
+        /* Image container */
+        .image-container {
+            width: 100%;
+            height: 100%;
+            overflow: hidden; /* Ensure no overflow */
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the image covers the container */
+            transition: transform 0.3s ease; /* Optional: Add a transition for hover effects */
+        }
+
+        /* Optional: Add hover effect to images */
+        .image-container img:hover {
+            transform: scale(1.05); /* Slight zoom effect on hover */
+        }
+
+        /* Name and role container */
+        .member-content {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            text-align: center;
+            z-index: 2;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        /* Name styling */
+        .member-content h2 {
+            font-size: 20px;
+            font-weight: bold;
+            text-shadow: none;
+            color: white;
+        }
+
+        /* Hide name and role on hover */
+        .member:hover .member-content {
+            opacity: 0;
+        }
+
+        /* Social icons */
+        .social-icons {
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, 50px);
+            display: flex;
+            gap: 15px;
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 25px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.4);
+            color: #1e90ff;
+        }
+
+        /* Show icons on hover */
+        .member:hover .social-icons {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .member {
+                width: 280px;
+                height: 280px;
+            }
+
+            .member-content h2 {
+                font-size: 18px;
+            }
+
+            .social-icons a {
+                font-size: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h1>Meet Our Team</h1>
+    <section class="team">
+        <div class="member">
+            <div class="image-container">
+                <img src="images/Megha_boss.jpg" alt="Megha Sharma">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/megha-sharma-766224239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/meghasharma.03" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="member-content">
+                <h2>Megha Sharma</h2>
+                <p>President</p>
+            </div>
+        </div>
+        <div class="member">
+            <div class="image-container">
+                <img src="images/Simarjeet_boss.jpg" alt="Simarjeet Kaur">
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/simarjeetkaur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://instagram.com/simarrjeetkaur" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="member-content">
+                <h2>Simarjeet Kaur</h2>
+                <p>Vice President</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="team">
+            <!-- Team members dynamically generated -->
+            <h2>Technical Team</h2>
+            <section class="team">
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Gargi_boss.jpg" alt="Gargi Mittal">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/gargi-mittal-199434230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/gargiwithdiary?igsh=YXRoOTZuN3Fld3Vmlark" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://github.com/GargiMittal" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Gargi Mittal</h2>
+                        <p>Technical Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Khushi_boss.jpg" alt="Khushi Tomer">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/khushi-tomer-416780258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/khushi_tomer_" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Khushi Tomer</h2>
+                        <p>Technical Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Jahanvi.jpg" alt="Jahanvi Babani">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/janhvibabani" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Janhvibabani" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.instagram.com/janhvvi_/profilecard/?igsh=Z3ViOWIzeGhpenR4" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Jahanvi Babani</h2>
+                        <p>Technical Sub Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Himanshi.jpg" alt="Himanshi Rathore">
+                        <div class="social-icons">
+                            <a href="https://linkedin.com/himanshi-rathore-941807270/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/Unico_153?s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/himanshiiii_1503/profilecard/?igsh=dWlhZzg4ZWk3bGox" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Himanshi Rathore</h2>
+                        <p>Technical Sub Head</p>
+                    </div>
+                </div>
+            </section>
+            
+            <h2>Creative Team</h2>
+            <section class="team">
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/geetanjali_boss.jpg" alt="Geetanjali Barmer">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/geetanjalibarman?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://x.com/Geetanjali_1995?t=b-gZKkYWcQyVUyHtC-TDBw&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/_itsgb_?igsh=MWV5d2JzYzA2cWV1" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Geetanjali Barmer</h2>
+                        <p>Creative Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Suhani_boss.jpg" alt="Sunaina Sharma">
+                        <div class="social-icons">
+                            <a href="https://linkedin.com/in/oliviagreen" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/sunaina_badyal" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Sunaina Sharma</h2>
+                        <p>Creative Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Chanika.jpg" alt="Chanika Rathore">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/chainika-rathore-8a942b24a" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/Chainika_02" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Chanika Rathore</h2>
+                        <p>Creative Sub Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Divya.jpg" alt="Divya Bhati">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/divya-bhati-79829a271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/mis._divya_bhati/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Divya Bhati</h2>
+                        <p>Creative Sub Head</p>
+                    </div>
+                </div>
+            </section>
+            
+            <h2>Literary Team</h2>
+            <section class="team">
+                <div class="member">
+                    <div class="image-container">
+                        <img ```html
+                        <img src="images/Deepshika_boss.jpg" alt="Deep Shikha Verma">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/deep-s-04b876242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/Deepshikhaaa05" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Deep Shikha Verma</h2>
+                        <p>Literary Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Khyati_boss.jpg" alt="Khyati Chattree">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/khyati-chattree" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/Khyati13C" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Khyati Chattree</h2>
+                        <p>Literary Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Laxmi.jpg" alt="Laxmi Sankhla">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/laxmi-sankhla-06196228b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/laxmi._sankhla/profilecard/?igsh=MWtueHpneXJjbjgyaw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Laxmi Sankhla</h2>
+                        <p>Literary Sub Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images\Gargi.jpg" alt="Gargi Sharma">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/gargi-sharma-598a442b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/shadowcipher__" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Gargi Sharma</h2>
+                        <p>Literary Sub Head</p>
+                    </div>
+                </div>
+            </section>
+            
+            <h2>Innovation Team</h2>
+            <section class="team">
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Nandani_boss.jpg" alt="Nandani Kumari">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/nandani-kumari-a9b334237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/nandani._.gupta" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Nandani Kumari</h2>
+                        <p>Innovation Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Himanshi.jpg" alt="Astha Patni">
+                        <div class="social-icons">
+                            <a href="http://www.linkedin.com/in/aasthapatni" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/aasthapatni_" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        < ```html
+                        <h2>Astha Patni</h2>
+                        <p>Innovation Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Preeti.jpg" alt="Preeti Rawat">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/preeti-rawat-b39227272" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/preeti_rawat730" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Preeti Rawat</h2>
+                        <p>Innovation Sub Head</p>
+                    </div>
+                </div>
+                <div class="member">
+                    <div class="image-container">
+                        <img src="images/Astha.jpg" alt="Astha Sharma">
+                        <div class="social-icons">
+                            <a href="https://www.linkedin.com/in/astha-sharma-10290a311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://www.instagram.com/_.pastaaaa" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-content">
+                        <h2>Astha Sharma</h2>
+                        <p>Innovation Sub Head</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <!-- <script>
+        const team = [
+            {
+                name: "Megha Sharma",
+                role: "President",
+                email: "meghasharmaa0505@gmail.com",
+                linkedin: "https://www.linkedin.com/in/megha-sharma-766224239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram: "https://instagram.com/meghasharma.03",
+                image: "images/Megha_boss.jpg",
+            },
+            {
+                name: "Simarjeet Kaur",
+                role: "Vice President",
+                email: "simarjeet7516@gmail.com",
+                twitter: "https://twitter.com/notsimarr",
+                instagram: "https://instagram.com/simarrjeetkaur",
+                image: "images/Simarjeet_boss.jpg",
+            },
+            {
+                name: "Gargi Mittal",
+                role: "Technical Head",
+                linkedin: "https://www.linkedin.com/in/gargi-mittal-199434230?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram: "https://www.instagram.com/gargiwithdiary?igsh=YXRoOTZuN3Fld3Vmlark",
+                github:"https://github.com/GargiMittal",
+                image: "images/Gargi_boss.jpg",
+            },
+            {
+                name: "Khushi Tomer",
+                role: "Technical Head",
+                email: "tomerkhushi025@gmail.com",
+                linkedin: "https://www.linkedin.com/in/khushi-tomer-416780258?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram:"https://www.instagram.com/khushi_tomer_",
+                image: "images/Khushi_boss.jpg",
+            },
+            {
+                name: "Jahanvi babani",
+                role: "Technical Sub Head",
+                github: "https://github.com/Janhvibabani",
+                instagram:"https://www.instagram.com/janhvvi_/profilecard/?igsh=Z3ViOWIzeGhpenR4",
+                linkedin: "https://www.linkedin.com/in/janhvibabani",
+                image: "images/Jahanvi.jpg",
+            },
+            {
+                name: "Himanshi Rathore",
+                role: "Technical Sub Head",
+                twitter: "https://x.com/Unico_153?s=09",
+                linkedin: "https://linkedin.com/himanshi-rathore-941807270/",
+                instagram: "https://www.instagram.com/himanshiiii_1503/profilecard/?igsh=dWlhZzg4ZWk3bGox",
+                image: "images/Himanshi.jpg",
+            },
+            
+            {
+                name: "Geetanjali Barmer",
+                role: "Creative head",
+                linkedin: "https://www.linkedin.com/in/geetanjalibarman?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                twitter: "https://x.com/Geetanjali_1995?t=b-gZKkYWcQyVUyHtC-TDBw&s=09",
+                instagram:"https://www.instagram.com/_itsgb_?igsh=MWV5d2JzYzA2cWV1",
+                image: "images/geetanjali_boss.jpg",
+            },
+            {
+                name: "Sunaina Sharma",
+                role: "Creative head",
+                email: "Sunainasharma2303@gmail.com",
+                linkedin: "https://linkedin.com/in/oliviagreen",
+                instagram: "https://www.instagram.com/sunaina_badyal",
+                image: "images/Suhani_boss.jpg",
+            },
+            {
+                name: "Chanika Rathore",
+                role: "Creative Sub Head",
+                email: "Chainikarathore7976@gmail.com",
+                linkedin: "https://www.linkedin.com/in/chainika-rathore-8a942b24a",
+                instagram:"https://www.instagram.com/Chainika_02",
+                image: "images/Chanika.jpg",
+            },
+            {
+                name: "Divya Bhati",
+                role: "Creative Sub Head",
+                email: "bhatidivya653@gmail.com",
+                linkedin: "https://www.linkedin.com/in/divya-bhati-79829a271?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram: "https://www.instagram.com/mis._divya_bhati/",
+                image: "images/Divya.jpg",
+            },
+            {
+                name: "Deep Shikha Verma",
+                role: "Literary Head",
+                email: "vdeep9909@gmail.com",
+                instagram:"https://www.instagram.com/Deepshikhaaa05",
+                linkedin: "https://www.linkedin.com/in/deep-s-04b876242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                image: "images/Deepshika_boss.jpg",
+            },
+            {
+                name: "Khyati Chattree",
+                role: "Literary Head",
+                email: "21cse056@gweca.ac.in",
+                linkedin: "https://www.linkedin.com/in/khyati-chattree",
+                github: "https://github.com/Khyati13C",
+                image: "images/Khyati_boss.jpg",
+            },
+            {
+                name: "Laxmi Sankhla",
+                role: "Literary Sub Head",
+                email: "laxmisinghsankhla@gmail.com",
+                linkedin: "https://www.linkedin.com/in/laxmi-sankhla-06196228b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram:"https://www.instagram.com/laxmi._sankhla/profilecard/?igsh=MWtueHpneXJjbjgyaw==",
+                image: "images/Laxmi.jpg",
+            },
+            {
+                name: "Gargi sharma",
+                role: "Literary Sub Head",
+                email: "olivia.green@example.com",
+                linkedin: "https://linkedin.com/in/oliviagreen",
+                facebook: "https://facebook.com/oliviagreen",
+                image:"",
+            },
+            {
+                name: "Nandani Kumari ",
+                role: "Innovation Head",
+                email: "21it12@gweca.ac.in",
+                linkedin: "https://www.linkedin.com/in/nandani-kumari-a9b334237?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram:"https://www.instagram.com/nandani._.gupta",
+                image: "images/Nandani_boss.jpg",
+            },
+            {
+                name: "Astha Patni",
+                role: "Innovation Head",
+                email: "aasthapatni90@gmail.com",
+                linkedin: "http://www.linkedin.com/in/aasthapatni",
+                instagram: "https://www.instagram.com/aasthapatni_",
+                image: "images/Himanshi.jpg",
+            },
+            {
+                name: "Preeti rawat",
+                role: "Innovation Sub Head",
+                email: "preetirawat.masuda@gmail.com",
+                linkedin: "https://www.linkedin.com/in/preeti-rawat-b39227272",
+                instagram: "https://www.instagram.com/preeti_rawat730",
+                image: "images/Preeti.jpg",
+            },
+            {
+                name: "Astha sharma",
+                role: "Innovation Sub Head",
+                email: "sharmaastha2914@gmail.com",
+                linkedin: "https://www.linkedin.com/in/astha-sharma-10290a311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                instagram: "https://www.instagram.com/_.pastaaaa",
+                image: "images/Astha.jpg",
+            },
+            
+        ];
+    
+        const teamContainer = document.querySelector('.team');
+        team.forEach(member => {
+            const memberDiv = document.createElement('div');
+            memberDiv.classList.add('member');
+            memberDiv.innerHTML = `
+                <div class="image-container">
+                    <img src="${member.image}" alt="${member.name}">
+                    <div class="social-icons">
+                        ${member.linkedin ? `<a href="${member.linkedin}" target="_blank"><i class="fab fa-linkedin"></i></a>` : ''}
+                        ${member.facebook ? `<a href="${member.facebook}" target="_blank"><i class="fab fa-facebook"></i></a>` : ''}
+                        ${member.twitter ? `<a href="${member.twitter}" target="_blank"><i class="fab fa-twitter"></i></a>` : ''}
+                        <a href="mailto:${member.email}"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="member-content">
+                    <h2>${member.name}</h2>
+                    <p>${member.role}</p>
+                </div>
+            `;
+            teamContainer.appendChild(memberDiv);
+        });
+    </script> -->
+</body>
+</html>
